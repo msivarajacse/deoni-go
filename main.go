@@ -15,6 +15,7 @@ func main() {
 	transaction := wallet.NewTransaction(walletA.PrivateKey(), walletA.PublicKey(), walletA.PublicAddress(), walletB.PublicAddress(), 100)
 
 	//	Create Block in Blockchain
+	//	Create Block in Blockchain
 	blockchain := block.NewBlockchain()
 	isAdded := blockchain.AddTransaction(walletA.PublicAddress(), walletB.PublicAddress(), 100, walletA.PublicKey(), transaction.GenerateSignature())
 	fmt.Println("Added?", isAdded)
